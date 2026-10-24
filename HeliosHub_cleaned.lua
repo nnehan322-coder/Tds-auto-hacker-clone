@@ -104,7 +104,7 @@ local function StartAutoSkip()
             if skipVisible and skipVisible.Position == UDim2.new(0.5, 0, 0.5, 0) then
                 RunVoteSkip()
             end
-            task.wait(1)
+            task.wait(0.2)
         end
     end)
 end
