@@ -104,7 +104,7 @@ local function StartAutoSkip()
             if skipVisible and skipVisible.Position == UDim2.new(0.5, 0, 0.5, 0) then
                 RunVoteSkip()
             end
-            task.wait(0.2)
+            task.wait(0.01)
         end
     end)
 end
@@ -551,7 +551,7 @@ local ALL_TOWERS = {
     "Turret", "Brawler", "Engineer", "Hacker", "Necromancer", "Accelerator", "Commando", "Gladiator",
     "Slasher", "Archer", "Frost Blaster", "Swarmer", "Toxic Gunner", "Elf Camp", "Jester", "Cryomancer",
     "Halloween Punk", "Snowballer", "Harvester", "Elementalist", "Spotlight Technician",
-    "Firework Technician", "Biologist", "Warlock", "War Machine", "EvolvedJuggernaut", "EvolvedOperator", "EvolvedEnforcer"
+    "Firework Technician", "Biologist", "Warlock", "War Machine", "EvolvedJuggernaut", "EvolvedOperator", "EvolvedEnforcer, EvolvedMecha Base, Time Dilator"
 }
 
 -- Global variable for selected tower (will be updated by active dropdown)
