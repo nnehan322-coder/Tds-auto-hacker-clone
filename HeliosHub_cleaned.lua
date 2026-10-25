@@ -234,14 +234,14 @@ local function StartAutoNecro()
                 end
                 lastActivation = now
             end
-            task.wait(1)
+            task.wait(65)
         end
     end)
 end
 local function StopAutoNecro() AutoNecroRunning = false; if AutoNecroThread then task.cancel(AutoNecroThread) end end
 AutomationTab:Toggle({
     Title = "Auto Necro",
-    Desc = "Uses Necromancer 'Raise The Dead' (25 sec cooldown)",
+    Desc = "Uses Necromancer 'Raise The Dead' ( 65 sec cooldown)",
     Callback = function(v) if v then StartAutoNecro() else StopAutoNecro() end end,
 })
 AutomationTab:Space()
@@ -551,7 +551,7 @@ local ALL_TOWERS = {
     "Turret", "Brawler", "Engineer", "Hacker", "Necromancer", "Accelerator", "Commando", "Gladiator",
     "Slasher", "Archer", "Frost Blaster", "Swarmer", "Toxic Gunner", "Elf Camp", "Jester", "Cryomancer",
     "Halloween Punk", "Snowballer", "Harvester", "Elementalist", "Spotlight Technician",
-    "Firework Technician", "Biologist", "Warlock", "War Machine", "EvolvedJuggernaut", "EvolvedOperator", "EvolvedEnforcer, EvolvedMecha Base, Time Dilator"
+    "Firework Technician", "Biologist", "Warlock", "War Machine", "EvolvedJuggernaut", "EvolvedOperator", "EvolvedEnforcer", "EvolvedMecha Base", "Time Dilator"
 }
 
 -- Global variable for selected tower (will be updated by active dropdown)
